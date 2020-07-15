@@ -7,8 +7,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Hooks />
-      {/* <ThemeChanger /> */}
+      {/* <Hooks /> */}
+      <ThemeChanger />
       {/* <RenderProp /> */}
     </div>
   );
