@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import { useState } from "react";
 
-export default class RenderProp extends Component {
-    render(){
-        return (
-            <div></div>
-        )
-    }
-}
+export default (props) => {
+  let [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  return props.render(theme, toggleTheme);
+};
